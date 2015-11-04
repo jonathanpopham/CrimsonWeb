@@ -1,0 +1,33 @@
+{
+  "name": "CrimsonWeb",
+  "authors": [
+    "jonathanpopham <jonathan.popham@gmail.com>"
+  ],
+  "description": "Crime fighting software",
+  "main": "app.js",
+  "moduleType": [
+    "es6",
+    "node"
+  ],
+  "keywords": [
+    "Crimson",
+    "Fist",
+    "Phreaknic",
+    "Predpol",
+    "polymer",
+    "crime"
+  ],
+  "license": "Apache 2.0",
+  "homepage": "nightwatch.io",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "paper-checkbox": "PolymerElements/paper-checkbox#~1.0.13"
+  }
+}

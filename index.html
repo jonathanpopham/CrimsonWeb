@@ -9,28 +9,44 @@
 
 
   </head>
-  <body onload="doLoad()">
-    <div id="panel">
-      <div id="checkboxes">
-   
-        <label for="aggassault" >Agg Assault:</label>
-        <paper-checkbox id="aggassault" onchange="toggleHeatmap()"> </paper-checkbox>
-        <label for="autotheft" style='margin-left: 20px;'>Auto Theft:</label>
-        <input type="checkbox" id="autotheft" onchange="toggleHeatmap()" checked>
-        <label for="burglary" style='margin-left: 20px;'>Burglary:</label>
-        <input type="checkbox" id="burglary" onchange="toggleHeatmap()" checked>
-        <label for="homicide" style='margin-left: 20px;'>Homicide:</label>
-        <input type="checkbox" id="homicide" onchange="toggleHeatmap()" checked>
-        <label for="larceny" style='margin-left: 20px;'>Larceny:</label>
-        <input type="checkbox" id="larceny" onchange="toggleHeatmap()" checked>
-        <label for="rape" style='margin-left: 20px;'>Rape:</label>
-        <input type="checkbox" id="rape" onchange="toggleHeatmap()" checked>
-        <label for="robbery" style='margin-left: 20px;'>Robbery:</label>
-        <input type="checkbox" id="robbery" onchange="toggleHeatmap()" checked>
+  <body unresolved class="fullbleed layout vertical" onload="doLoad()">
+    <paper-drawer-panel id="panel">
+        <div drawer >
+
+      <div id="checkboxes" style="margin-top:15px;">
+
+       <paper-checkbox id="aggassault" style='padding-left:10px;' onchange="toggleHeatmap()"> </paper-checkbox>
+       <label for="aggassault"> Agg Assault: </label>
+
+
+          <br>
+
+        <paper-checkbox type="checkbox" style='padding-left:10px;' id="autotheft" onchange="toggleHeatmap()"> </paper-checkbox>
+          <label for="autotheft" >Auto Theft:</label>
+          <br>
+
+        <paper-checkbox type="checkbox" style='padding-left:10px;' id="burglary" onchange="toggleHeatmap()"> </paper-checkbox>
+          <label for="burglary" '>Burglary:</label>
+          <br>
+
+        <paper-checkbox type="checkbox" style='padding-left:10px;' id="homicide" onchange="toggleHeatmap()" color="black"> </paper-checkbox>
+          <label for="homicide" >Homicide:</label>
+          <br>
+
+        <paper-checkbox type="checkbox" style='padding-left:10px;' id="larceny" onchange="toggleHeatmap()"> </paper-checkbox>
+          <label for="larceny" >Larceny:</label>
+          <br>
+
+        <paper-checkbox type="checkbox" style='padding-left:10px;' id="rape" onchange="toggleHeatmap()"> </paper-checkbox>
+          <label for="rape" >Rape:</label>
+          <br>
+        <paper-checkbox type="checkbox" style='padding-left:10px;' id="robbery" onchange="toggleHeatmap()"> </paper-checkbox>
+          <label for="robbery" >Robbery:</label>
     </div>
-    <div id="timeSelection">
-        <label>Day of week: </label>
-        <select id="dayOfWeek" onchange="toggleHeatmap()">
+
+    <div id="timeSelection" style='padding-left:10px;'>
+
+        <select  id="dayOfWeek" onchange="toggleHeatmap()">
             <option value="Sun">Sunday</option>
             <option value="Mon">Monday</option>
             <option value="Tue">Tuesday</option>
@@ -38,48 +54,69 @@
             <option value="Thu">Thursday</option>
             <option value="Fri">Friday</option>
             <option value="Sat">Saturday</option>
+            </select>
+
+        <br>
+        <paper-checkbox type="checkbox" id="ignoreDay" onchange="toggleHeatmap()" checked> </paper-checkbox>
+
+        <label for="ignoreDay">Ingore Day:</label>
+                                                                       <br>
+
+        <label for="hourofDay" label="Hour of Day"></label>
+
+            <select id="hourOfDay"  onchange="toggleHeatmap()">
+              <option value="0">12AM</option>
+              <option value="1">1AM</option>
+              <option value="2">2AM</option>
+              <option value="3">3AM</option>
+              <option value="4">4AM</option>
+              <option value="5">5AM</option>
+              <option value="6">6AM</option>
+              <option value="7">7AM</option>
+              <option value="8">8AM</option>
+              <option value="9">9AM</option>
+              <option value="10">10AM</option>
+              <option value="11">11AM</option>
+              <option value="12">12PM</option>
+              <option value="13">1PM</option>
+              <option value="14">2PM</option>
+              <option value="15">3PM</option>
+              <option value="16">4PM</option>
+              <option value="17">5PM</option>
+              <option value="18">6PM</option>
+              <option value="19">7PM</option>
+              <option value="20">8PM</option>
+              <option value="21">9PM</option>
+              <option value="22">10PM</option>
+              <option value="23">11PM</option>
+
         </select>
-        <label for="ignoreDay" style='margin-left: 20px;'>Ingore Day:</label>
-        <input type="checkbox" id="ignoreDay" onchange="toggleHeatmap()" checked>
-        <label>" Hour of day"</label>
-        <select id="hourOfDay" onchange="toggleHeatmap()">
-          <option value="0">12AM</option>
-          <option value="1">1AM</option>
-          <option value="2">2AM</option>
-          <option value="3">3AM</option>
-          <option value="4">4AM</option>
-          <option value="5">5AM</option>
-          <option value="6">6AM</option>
-          <option value="7">7AM</option>
-          <option value="8">8AM</option>
-          <option value="9">9AM</option>
-          <option value="10">10AM</option>
-          <option value="11">11AM</option>
-          <option value="12">12PM</option>
-          <option value="13">1PM</option>
-          <option value="14">2PM</option>
-          <option value="15">3PM</option>
-          <option value="16">4PM</option>
-          <option value="17">5PM</option>
-          <option value="18">6PM</option>
-          <option value="19">7PM</option>
-          <option value="20">8PM</option>
-          <option value="21">9PM</option>
-          <option value="22">10PM</option>
-          <option value="23">11PM</option>
-        </select>
-        <label for="ignoreHour" style='margin-left: 20px;'>Ingore Hour:</label>
-        <input type="checkbox" id="ignoreHour" onchange="toggleHeatmap()" checked>
+        <br>
+
+        <paper-checkbox id="ignoreHour" onchange="toggleHeatmap()" checked> </paper-checkbox>
+        <label for="ignoreHour">Ingore Hour:</label>
       </div>
-      <button onclick="toggleHeatmap()">Toggle Heatmap</button>
-      <button onclick="changeGradient()">Change gradient</button>
+      <!--<button onclick="toggleHeatmap()">Toggle Heatmap</button>-->
+      <!--<button onclick="changeGradient()">Change gradient</button>-->
+            <div style='padding-left:10px;'>
+            <br>
       <b>Change radius:</b>
-      <input onchange="changeRadius()" type="number" id="radiusText" value="20" style="width: 50px;" ></input>
-      <button onclick="changeOpacity()">Change opacity</button>
-      <button onclick="changeDis()">Change dissipating</button>
+      <input onchange="changeRadius()"  type="number" id="radiusText" value="20" style="width: 50px;" ></input>
+      <!--<button onclick="changeOpacity()">Change opacity</button>-->
+      <!--<button onclick="changeDis()">Change dissipating</button>-->
+
+            <p>
       Points: <Label id="points">0</Label>, Zone: 507
-    </div>
-    <div id="map-canvas"></div>
+            </p>
+            </div>
+            </div>
+
+        <div main id="map-canvas"></div>
+
+    </paper-drawer-panel>
+
+
+
 
     <script src="https://cdn.firebase.com/js/client/2.0.5/firebase.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=visualization"></script>

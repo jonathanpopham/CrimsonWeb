@@ -28,6 +28,10 @@
     "tests"
   ],
   "dependencies": {
-    "paper-checkbox": "PolymerElements/paper-checkbox#~1.0.13"
+    "paper-checkbox": "PolymerElements/paper-checkbox#~1.0.13",
+    "paper-dropdown-menu": "PolymerElements/paper-dropdown-menu#~1.1.0",
+    "paper-menu": "PolymerElements/paper-menu#~1.1.1",
+    "paper-item": "PolymerElements/paper-item#~1.0.6",
+    "paper-drawer-panel": "PolymerElements/paper-drawer-panel#~1.0.4"
   }
 }

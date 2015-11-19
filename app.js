@@ -9,7 +9,7 @@ function initialize() {
         zoom: 15,
         center: myLatlng,
         mapTypeId: google.maps.MapTypeId.SATELLITE
-    }
+    };
 
     map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
@@ -23,7 +23,7 @@ var currentTime = new Date();
 function doLoad(e) {
     document.getElementById("hourOfDay").value = currentTime.getHours().toString();
     document.getElementById("dayOfWeek").selectedIndex = currentTime.getDay();
-};
+}
 
 ref.on("value", function(snapshot) {
     console.log(snapshot.val());
